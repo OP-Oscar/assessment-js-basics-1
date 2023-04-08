@@ -50,9 +50,13 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+let totalAcres = 0
 
-
-
+for(i=0; i<7; i++){
+    totalAcres = totalAcres + fujiAcres[i] + galaAcres[i] + pinkAcres[i]; //Iterated through 3 lists and added values to total acres
+}
+console.log(`Total acres picked: ${totalAcres}`);
+console.log(`-----------------`);
 
 
 // PROBLEM 2
@@ -68,8 +72,10 @@ const pinkPrice = .55
 */
 
 // CODE HERE
-
-
+let averageDailyAcres = totalAcres/(fujiAcres.length + galaAcres.length + pinkAcres.length);  //Used length to obtain count of values in list. I then added these values to obtain 21.
+// let averageDailyAcres = totalAcres/21 //shorter way to write function since we know there are 7 days per week times 3 due to three lists
+console.log(`Average acres picked per day: ${averageDailyAcres}`);
+console.log(`-----------------`);
 
 
 
@@ -106,7 +112,13 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+while (acresLeft>0){
+    acresLeft = acresLeft-averageDailyAcres //this looped until while acresleft reduced in increments. Days variable was counting how many times the while loop actioned. 
+    days++
+}
 
+console.log(`Days remaining to pick Apples: ${days}`);
+console.log(`-----------------`);
 
 
 // PROBLEM 4
@@ -135,12 +147,20 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
 
+for(i=0; i< 7; i++){
+    fujiTons.push(fujiAcres[i]*6.5); //Used push to add value of tons in a list based on values from the acres list
+    galaTons.push(galaAcres[i]*6.5);
+    pinkTons.push(pinkAcres[i]*6.5);
+}
 
-
+console.log(`Total Fuji tons yielded by day: ${fujiTons}`);
+console.log(`Total Gala tons yielded by day: ${galaTons}`);
+console.log(`Total Pink tons yielded by day: ${pinkTons}`);
+console.log(`-----------------`);
 
 
 
@@ -162,12 +182,21 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
 
+for(i=0; i<7; i++){
+    fujiPounds = fujiPounds + fujiTons[i]*2000; //Used similar approach from previous problem to turn tons to pounds. 
+    galaPounds = galaPounds + galaTons[i]*2000;
+    pinkPounds = pinkPounds + pinkTons[i]*2000;
+}
 
+console.log(`Total Fuji pounds: ${fujiPounds}`);
+console.log(`Total Gala pounds: ${galaPounds}`);
+console.log(`Total Pink pounds: ${pinkPounds}`);
 
+console.log(`-----------------`);
 
 
 
@@ -189,12 +218,15 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice //assigned variables using other variables to obtain value
+let galaProfit = galaPounds * galaPrice
+let pinkProfit = pinkPounds * galaPrice
 
 
-
+console.log(`Total Fuji profit: $${fujiProfit}`)
+console.log(`Total Gala profit: $${galaProfit}`)
+console.log(`Total Pink profit: $${pinkProfit}`)
+console.log(`-----------------`);
 
 
 
@@ -209,3 +241,7 @@ let days = 0
 */
 
 // CODE HERE
+
+let totalProfit = fujiProfit + galaProfit + pinkProfit  //simple addition to obtain final profits
+
+console.log(`Final total profit obtained: $${totalProfit}`)

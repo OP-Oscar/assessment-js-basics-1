@@ -10,6 +10,11 @@
 */
 
 //CODE HERE
+let gitDefinition = `Git is a way to track changes to folders. This 
+is very handy in case you ever make a change and you need to rever to 
+your previous file version.`
+console.log(gitDefinition)
+console.log(`-----------------`);
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +23,12 @@
 */
 
 //CODE HERE
+let gitHubDefinition = `GitHub is like your storage online where your 
+git versions are stored. This is handy because you can access your pushed 
+data from other computers by downloading/cloning the repository located in Github.`
+console.log(gitHubDefinition)
+console.log(`-----------------`);
+
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -26,6 +37,12 @@
 */
 
 //CODE HERE
+let gitInitDefinition = `git init is the initial command you use to initialize a 
+git on your desired folder. It creates a blank git for tracking.`
+console.log(gitInitDefinition)
+console.log(`-----------------`);
+
+
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -34,6 +51,11 @@
 */
 
 //CODE HERE
+let gitCloneDefinition = `git clone allows a user to copy a 
+repository from github in order to be able to work on it.`
+console.log(gitCloneDefinition)
+console.log(`-----------------`);
+
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -42,6 +64,12 @@
 */
 
 //CODE HERE
+let gitStatusDefinition = `git status allows you to check current status of your git. 
+In specific, it shows you changes done and changes that still need to be pushed and committed.`
+console.log(gitStatusDefinition)
+console.log(`-----------------`);
+
+
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -53,6 +81,12 @@
 */
 
 //CODE HERE
+let gitAddDefinition = `git add is what lets you add files in your directory to your git version.`
+console.log(gitAddDefinition)
+
+let gitAddCode = "git add ."
+
+console.log(`-----------------`);
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -60,10 +94,18 @@
     It should be a string containing your best definition of what 'git commit' does.
 
     Create a variable called 'gitCommitCode'.  
-    It should be a string containing the code to commit using the message "initial commit".
+    It should be a string containing the code to commit using the message `initial commit`.
 */
 
 //CODE HERE
+let gitCommitDefinition = `git command is the last step where you confirm that you want to make 
+changes to your git.`
+console.log(gitCommitDefinition)
+
+let gitCommitCode = `git commit -m "initial commit"`
+console.log(gitCommitCode)
+console.log(`-----------------`);
+
 
 
 //////////////////PROBLEM 8////////////////////
@@ -73,3 +115,7 @@
 */
 
 //CODE HERE
+
+let gitPushDefinition = `git push is the command that allows you to put your git 
+on to github which is a remote service`
+console.log(gitPushDefinition)
